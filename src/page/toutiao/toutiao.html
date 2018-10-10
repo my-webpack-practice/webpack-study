@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="author" content="东方头条">
+  <meta name="keywords" content="东方头条,头条新闻,头条,今日新闻头条,头条网,头条新闻,今日头条新闻">
+  <meta name="description" content="东方头条网-东方网旗下《东方头条》是一款会自动学习的资讯软件,它会分析你的兴趣爱好,为你推荐喜欢的内容,并且越用越懂你.就要你好看,东方头条新闻网!">
+  <link rel="dns-prefetch" href="//mini.eastday.com/" />
+  <link rel="shortcut icon" href="//mini.eastday.com/toutiaoh5/img/favicon.ico" />
+  <link rel="bookmark" href="//mini.eastday.com/toutiaoh5/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon-precomposed" href="//mini.eastday.com/toutiaoh5/img/favicon.ico">
+  <title>头条新闻</title>
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement;
+      var resizeEvt =
+        'orientationchange' in window ? 'orientationchange' : 'resize';
+      var recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        var MAX_WIDTH = 750;
+        if (!clientWidth) {
+          return;
+        }
+        if (clientWidth >= MAX_WIDTH) {
+          docEl.style.fontSize = '100px';
+        } else {
+          docEl.style.fontSize = 100 * (clientWidth / MAX_WIDTH) + 'px';
+        }
+      };
+      recalc();
+      if (!doc.addEventListener) {
+        return;
+      }
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
+
+  <!-- 后台生成的渠道（测试）  内容为var TTH5_QIDS = ['null','ceshi1']; -->
+  <script type="text/javascript" src="//mini.eastday.com/toutiaoh5/channeljs/h5toutiao/h5toutiaocookie.js"></script>
+
+  <!-- <link rel="stylesheet" href="css/swiper/swiper-3.4.0.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/page.css"> -->
+
+</head>
+
+<body>
+  <p style="display:none;font-size:0;">东方头条网-东方网旗下《东方头条》是一款会自动学习的资讯软件,它会分析你的兴趣爱好,为你推荐喜欢的内容,并且越用越懂你.就要你好看,东方头条新闻网!</p>
+  <header>
+    <!-- title -->
+    <!-- <section class="top-title">
+			<a href="javascript:;" class="refresh" id="J_refresh"><span></span></a>
+			<a href="search.html" class="search"></a>
+		</section> -->
+    <!-- menu -->
+    <section class="top-menu">
+      <div id="J_top_menu" class="top-menu-list">
+      </div>
+      <div class="menu-more">
+        <div class="list-shadow"></div>
+        <a href="subscribe.html" class="more-btn"></a>
+      </div>
+    </section>
+  </header>
+
+  <div id="J_content" class="news-list">
+    <div id="J_news_list" class="news-list-wrap">
+    </div>
+    <div id="J_loading" class="loading">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+      <p class="txt">数据加载中</p>
+    </div>
+  </div>
+
+  <!-- <script src="js/swiper/swiper-3.4.0.min.js"></script>
+  <script src="js/zepto.min.js"></script>
+  <script src="js/fastclick.min.js"></script>
+  <script src="js/web-storage-cache.min.js"></script>
+  <script src="js/js.cookie.js"></script>
+  <script src="js/lodash.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/lazyload.min.js"></script> -->
+
+  <!-- <script src="js/gg_config.js"></script>
+  <script src="js/gg_v4.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/dsp_log.js"></script> -->
+
+  <!-- <script>
+    (function () {
+      var getQueryString = function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return '';
+      }
+      var referrer = getQueryString('referrer');
+      if (referrer == '') {
+        referrer = document.referrer;
+      }
+      referrer = referrer.toLowerCase();
+      if (referrer.indexOf('m.baidu.com') >= 0 || referrer.indexOf('m.sm.cn') >= 0 || referrer.indexOf('m.so.com') >= 0 ||
+        referrer.indexOf('m.sogou.com') >= 0) {
+        var html =
+          '<a href="http://t.gjmgwn.cn/down/index?qid=toutiaoindex"><img width="' +
+          window.innerWidth + '" height="' + window.innerWidth +
+          '" src="https://mini.eastday.com/toutiaoh5/img/indexdown.png"></a>';
+        //发送展示数据
+        $.ajax({
+          url: 'https://sstic.xiald.com:8084/?j=c&c=0:12:1:0:4:995:1:375:667:8jm8qKu37wHLvJqjfM/tsVitEZlieKU8&title=ZWFzdGRheUFE&url=aHR0cDovLzEyNy4wLjAuMS8=',
+          dataType: 'jsonp'
+        });
+        $('#J_content').prepend(html)
+      }
+    })();
+  </script> -->
+</body>
+
+</html>
