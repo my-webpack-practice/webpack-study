@@ -11,10 +11,35 @@
 - 支持业务代码和公共代码、webpack 运行时代码分离（最大化的利用浏览器缓存）；
 - 支持开发、预发布、上线环境分离。
 
-## SPA
+## 使用方法
 
-单页面 CLI 请切换分支到`spa`：`git checkout -b spa origin/spa`
+```bash
+# 将项目clone下来
+git clone http://codeio.dftoutiao.com/RESEARCH/shfe-cli.git
+cd shfe-cli
 
-## MPA
+# 切换到对应的脚手架分支
+# 如果是使用spa脚手架执行：
+git checkout -b spa origin/spa
+# 如果使用mpa脚手架执行：
+git checkout -b mpa origin/mpa
 
-多页面 CLI 请切换分支到`mpa`：`git checkout -b mpa origin/mpa`
+# 删除.git文件
+rm -rf .git
+# 重新git初始化、添加、提交代码
+git init
+git add .
+git commit -m 'init'
+# 添加远程新项目仓库地址
+git remote add origin <新项目仓库地址>
+# 提交代码
+git push -u origin master
+```
+
+### SPA
+
+单页面 CLI 请切换分支到`spa`：`git checkout -b spa origin/spa`, 点击查看：[SPA](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/src/spa)
+
+### MPA
+
+多页面 CLI 请切换分支到`mpa`：`git checkout -b mpa origin/mpa`，点击查看：[MPA](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/src/mpa)
