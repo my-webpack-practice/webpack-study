@@ -19,9 +19,9 @@ git clone http://codeio.dftoutiao.com/RESEARCH/shfe-cli.git
 cd shfe-cli
 
 # 切换到对应的脚手架分支
-# 如果是使用spa脚手架执行：
+# 如果是单页应用：
 git checkout -b spa origin/spa
-# 如果使用mpa脚手架执行：
+# 如果是多页应用：
 git checkout -b mpa origin/mpa
 
 # 删除.git文件
