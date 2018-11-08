@@ -38,8 +38,8 @@ git push -u origin master
 
 ### SPA
 
-单页面 CLI 请切换分支到`spa`：`git checkout -b spa origin/spa`, 点击查看：[SPA](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/src/spa)
+单页面 CLI 请切换分支到`spa`，点击查看：[SPA](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/src/spa)
 
 ### MPA
 
-多页面 CLI 请切换分支到`mpa`：`git checkout -b mpa origin/mpa`，点击查看：[MPA](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/src/mpa)
+多页面 CLI 请切换分支到`mpa`，点击查看：[MPA](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/src/mpa)
