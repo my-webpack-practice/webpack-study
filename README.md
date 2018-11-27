@@ -46,4 +46,4 @@ git push -u origin master
 
 ## 问题反馈
 
-[提工单（issue）](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/issues/new) 或 [提合并请求(PR)](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/pulls)
+[提工单（issue）](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/issues/new) 或 [提合并请求（PR）](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/pulls)
