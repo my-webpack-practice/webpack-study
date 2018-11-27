@@ -43,3 +43,8 @@ git push -u origin master
 ### MPA
 
 多页面 CLI 请切换分支到`mpa`，点击查看：[MPA](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/src/mpa)
+
+## 问题反馈
+
+[提工单（issue）](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/issues/new)
+[提合并请求(Pull Request)](http://codeio.dftoutiao.com/RESEARCH/shfe-cli/pulls)
