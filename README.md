@@ -15,8 +15,8 @@
 
 ```bash
 # 将项目clone下来
-git clone http://codeio.dftoutiao.com/RESEARCH/shfe-cli.git
-cd shfe-cli
+git clone http://codeio.dftoutiao.com/RESEARCH/shfe-cli.git my-project
+cd my-project
 
 # 切换到对应的脚手架分支
 # 如果是单页应用：
