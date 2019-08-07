@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const config = require('./config');
 const notifier = require('node-notifier');
+const chalk = require('chalk');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const internalIp = require('internal-ip');
 const localIP = internalIp.v4.sync();
@@ -42,9 +43,10 @@ const devConfig = merge(commonConfig, {
           return;
         }
         const error = errors[0];
+        console.log(chalk, red(error.webpackError).split('- compiler')[0]);
         notifier.notify({
           title: 'Webpack error',
-          message: severity + ': ' + error.name,
+          message: error.webpackError,
           subtitle: error.file || '',
           icon: 'https://mini.eastday.com/toutiaoh5/img/logo.jpg'
         });
