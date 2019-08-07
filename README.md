@@ -93,5 +93,5 @@ npx browserslist
 
 ## 常见问题
 
-- 如发现打包后样式丢失，有可能是`purifycss-webpack`插件的 css Tree Shaking 功能导致误删了，解决方法，在 PurifyCssPlugin 配置中新增白名单[purifyOptions:{whitelist: ['\*swiper\*']}]('./build/webpack.common.js')，具体配置方法参考：[purifycss-webpack](https://www.npmjs.com/package/purifycss-webpack) 和 [purifycss](https://github.com/purifycss/purifycss#properties-of-options-object)
+- 如发现打包后样式丢失，有可能是`purifycss-webpack`插件的 css Tree Shaking 功能导致误删了，解决方法，在 `./build/webpack.common.js：PurifyCssPlugin` 配置中新增白名单（如排除包含 swiper 类名的样式：`{whitelist: ['*swiper*']}`），具体配置方法参考：[purifycss-webpack](https://www.npmjs.com/package/purifycss-webpack) 和 [purifycss](https://github.com/purifycss/purifycss#properties-of-options-object)
 - 安卓 4.4.3 以下不支持 Promise 的兼容方法：`window.Promise = require('es6-promise').Promise`（请先安装依赖包`npm install -S es6-promise`）;
