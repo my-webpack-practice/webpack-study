@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const config = require('./config');
+const chalk = require('chalk');
 const notifier = require('node-notifier');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const internalIp = require('internal-ip');
@@ -35,19 +36,17 @@ const devConfig = merge(commonConfig, {
     new webpack.HotModuleReplacementPlugin(),
     new FriendlyErrorsPlugin({
       compilationSuccessInfo: {
-        messages: [
-          `Local    ->  http://localhost:${PORT}/`,
-          `Network  ->  http://${localIP}:${PORT}/`
-        ]
+        messages: [`Local    ->  http://localhost:${PORT}/`, `Network  ->  http://${localIP}:${PORT}/`]
       },
       onErrors: (severity, errors) => {
         if (severity !== 'error') {
           return;
         }
         const error = errors[0];
+        console.log(chalk.red(error.webpackError.split('- compiler')[0]));
         notifier.notify({
-          title: 'Webpack error',
-          message: severity + ': ' + error.name,
+          title: 'Webpack Error!',
+          message: error.webpackError, // error.name,
           subtitle: error.file || '',
           icon: 'https://mini.eastday.com/toutiaoh5/img/logo.jpg'
         });

@@ -83,48 +83,15 @@ npm run fix
 ```
 
 ```bash
-# 查看结果
+# 查看兼容结果列表
 npx browserslist
-
-and_chr 69
-and_ff 62
-and_qq 1.2
-and_uc 11.8
-android 67
-android 4.4.3-4.4.4
-android 4.4
-baidu 7.12
-bb 10
-bb 7
-chrome 69
-chrome 68
-edge 17
-edge 16
-firefox 62
-firefox 61
-ie 11
-ie 10
-ie_mob 11
-ie_mob 10
-ios_saf 11.3-11.4
-ios_saf 11.0-11.2
-ios_saf 10.3
-ios_saf 10.0-10.2
-ios_saf 9.3
-ios_saf 9.0-9.2
-ios_saf 8.1-8.4
-ios_saf 8
-op_mini all
-op_mob 46
-op_mob 12.1
-opera 55
-opera 54
-safari 12
-safari 11.1
-samsung 7.2
-samsung 6.2
 ```
 
 ## 贡献
 
 如发现有 bug 或有更好的 idea，欢迎提 PR。
+
+## 常见问题
+
+- 如发现打包后样式丢失，有可能是`purifycss-webpack`插件的 css Tree Shaking 功能导致误删了，解决方法，在 PurifyCssPlugin 配置中新增白名单[purifyOptions:{whitelist: ['\*swiper\*']}]('./build/webpack.common.js')，具体配置方法参考：[purifycss-webpack](https://www.npmjs.com/package/purifycss-webpack) 和 [purifycss](https://github.com/purifycss/purifycss#properties-of-options-object)
+- 安卓 4.4.3 以下不支持 Promise 的兼容方法：`window.Promise = require('es6-promise').Promise`（请先安装依赖包`npm install -S es6-promise`）;

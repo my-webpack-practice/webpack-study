@@ -135,7 +135,10 @@ const webpackConfig = {
     // css tree-shaking
     new PurifyCssPlugin({
       minimize: true,
-      paths: glob.sync([path.join(__dirname, '../src/index.html'), path.join(__dirname, '../src/js/*.js')])
+      paths: glob.sync([path.join(__dirname, '../src/index.html'), path.join(__dirname, '../src/js/*.js')]),
+      purifyOptions: {
+        whitelist: ['*swiper*'] // 包含swiper的样式类名不做Tree Shaking
+      }
     }),
     new webpack.DefinePlugin({
       DEVELOPMENT: JSON.stringify(IS_DEV),
